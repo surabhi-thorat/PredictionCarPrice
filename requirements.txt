@@ -1,3 +1,5 @@
+cloudant==2.4.0
+cloudant==2.13.0
 async-generator==1.10
 backcall==0.2.0
 certifi==2020.6.20
