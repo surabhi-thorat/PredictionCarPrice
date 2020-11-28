@@ -1,22 +1,25 @@
-# MY CHANGES ----------------------------------------------------
-import warnings
-warnings.filterwarnings("ignore", category=FutureWarning)
-warnings.filterwarnings("ignore", category=UserWarning)
 
-warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 # PROGRAM 
-import numpy as np
+
 from flask import Flask, render_template, request
 import jsonify
 import requests
 import pickle
 
 import sklearn
-
+import numpy as np
 from sklearn.metrics import _scorer
 from sklearn.preprocessing import StandardScaler
+
+# MY CHANGES ----------------------------------------------------
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 app = Flask(__name__)
+
 model = pickle.load(open('random_forest_regression_model.pkl','rb'))
 
 
